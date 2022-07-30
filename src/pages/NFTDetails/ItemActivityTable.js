@@ -37,7 +37,7 @@ export default function ItemActivityTable(props) {
           <p className="w-20"></p>
         </div>
 
-        {props.data
+        {props?.data && props.data
           .slice(0)
           .reverse()
           .map((__, k) => {

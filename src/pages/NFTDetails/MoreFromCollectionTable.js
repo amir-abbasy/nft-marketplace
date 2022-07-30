@@ -3,6 +3,7 @@ import { addrsSubStr } from '../../global/helper'
 import Link from 'next/link'
 
 export default function MoreFromCollectionTable(props) {
+  if(!props.data)return
   return (
     <div className="mx-40 my-20 rounded-md mt-5 bg-white">
       <div className="flex p-4">
@@ -12,7 +13,7 @@ export default function MoreFromCollectionTable(props) {
         </h1>
       </div>
       <div className="grid grid-cols-4 gap-8 p-10">
-        {props.data.items.map((_, k) => {
+        {props?.data && props.data.items.map((_, k) => {
           return (
             <div
               key={k}

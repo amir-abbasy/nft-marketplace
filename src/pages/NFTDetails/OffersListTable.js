@@ -19,7 +19,7 @@ export default function OffersList(props) {
       </div>
       {/* work area */}
 
-      {props.offersList.map((item, key) => {
+      {props?.offersList && props.offersList.map((item, key) => {
         return (
           <div key={key} className="flex p-3 justify-between">
             <img src={conf.coin_icon} className="w-4 h-4" />
